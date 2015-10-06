@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Semantic Challenge</title>
+		<link rel='stylesheet' type='text/css' href='reset.css'>
+		<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+		<style type="text/css">
+		
+		body{
+			background-color: #F5D76E;
+		}
+
+		nav{
+			font-family: roboto;
+			margin: 30px auto;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items:stretch;
+			border-radius: 10px;
+			padding: 0;	
+		}		
+
+		a{
+			text-decoration: none;
+			color: white;
+			flex:1;
+			height: 30px;
+			font-family: Dosis;
+			padding:20px 20px 20px 20px;
+			text-align: center;
+			font-size: 2em;
+			border-bottom:1px solid white;
+		}
+
+		nav a:hover {
+			background-color: #fff;
+			transition: all .3s ease;
+			color: #F5D76E;
+
+		}
+		#logoNav{
+			font-size: 2em;
+			font-weight: bold;
+		}
+
+		#landing{
+			display:flex;
+			flex-direction:column;
+			align-items:center;
+			justify-content:center;
+		}
+
+		#landing-message{
+			flex:1;
+			font-size:3em;
+			font-family: Dosis;
+			text-align:center;
+		}
+
+		#landing-image{
+			flex:1;
+		}
+
+		img{
+			max-height:100%;
+			max-width:100%;
+		}
+
+		#deck{
+			display:flex;
+			flex-direction:column;
+			align-items:center;
+		}
+		.card{
+			background-color: white;
+			font-family: Dosis;
+			text-align:left;
+			margin:20px;
+			padding:20px;
+		}
+		
+		.card h2{
+			font-size:30px;
+		}
+
+		.card img{
+			width:100%;
+			/* max-width:480px;  Dont see this doing anything*/
+		}
+
+		.card p{
+			font-size:22px;
+		}
+
+
+ 	/* Styling for screen size larger than 700px */
+
+		@media screen and (min-width: 700px){
+			nav{
+					margin: 10px auto;
+					flex-direction: row;
+					justify-content:flex-end;
+				}
+			a{
+					height: 20px;
+					padding:20px 10px 20px 10px;
+					text-align: right;
+					font-size: 2em;
+					border:none;
+				}
+
+			#logoNav{
+					flex:2;
+					font-size: 2em;
+					font-weight: bold;
+					/* overflow: hidden; dont see what this does */
+					white-space: nowrap;
+				}
+
+			#landing{
+					display:flex;
+					flex-wrap:wrap;
+					flex-direction:row;
+					align-items:center;
+					justify-content:center;
+				}
+
+			#deck{
+					display:flex;
+					width:80%;
+					margin:auto;
+					flex-flow: row nowrap;
+					align-items:flex-start;
+					justify-content:space-around;
+				}
+			.card{
+					flex:1;
+					margin:10px;
+					padding:10px;
+					min-width:240px;
+
+				}
+
+			.card img{
+					width:100%;
+					/* min-width:240px;  Removing this fixes a resizing problem at roughly 750px width */
+
+			}
+		}
+
+		</style>
+</head>
+<body>
+
+	<nav>
+			<a id="logoNav">CHOCOBLOCK</a>
+			<a href="#">Home</a>
+			<a href="#">Projects</a>
+			<a href="#">About</a>
+			<a href="#">Contact</a>
+			<a href="#">Photos</a>
+	</nav>
+
+	<section id="landing">
+		<div id="landing-message">
+			<!--Message here-->
+			<h2>Make Creative Clever Fun Apps Simple.</h2>
+		</div>
+		<div id='landing-image'>
+			<!--Image here-->
+			<img src="img/laptop.png" alt="Laptop">
+		</div>
+	</section>
+
+	<section id="deck">
+
+		<div class="card">
+				<img src="img/graphic1.png" alt="design pic">
+				<h2>Web Info Sessions</h2>
+				<p>If you have any questions about your career in If you have any questions about your career in...</p>
+		</div>
+
+
+
+		<div class="card">
+				<img src="img/graphic2.png" alt="design pic">
+				<h2>Web Info Sessions</h2>
+				<p>If you have any questions about your career in...</p>
+		</div>
+
+
+		<div class="card">
+				<img src="img/graphic3.png" alt="design pic">
+				<h2>Web Info Sessions</h2>
+				<p>If you have any questions about your career in...</p>
+		</div>
+
+
+	</section>
+
+</body>
+</html>
